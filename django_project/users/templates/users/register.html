@@ -1,25 +1,12 @@
 {% extends "blog/base.html"%}
-
 {% block content%}
-    <div class = "content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class = "border-bottom mb-4">
-                    Join Today
-                </legend>
-               
-                
-                {{ form.as_p }} <!-- render the from as paragraph tag -->
-            </fieldset>
-            <div class = "form-group">
-               <div class = "btn btn-outline-info" type = "submit">Sign Up</div>
-             </div>
-        </form>
-        <div class = "border-top pt-3">
-            <small class = "text-muted">
-                Already Have an Account? <a class ="ml-2"href="#">Sign In</a>
-            </small>
-        </div>
-    </div>
+<div class="form-outline">
+    <input type="text" id="formControlLg" class="form-control form-control-lg" />
+    <label class="form-label" for="formControlLg"><h1>In order to register your society on Event Magazine, you must do as following :</h1> 
+        <h3><br>1) You must be the Society Representative. 
+        <br>2) Mail us your name, Society name, Society id card(Your position in society should be visible) at <a href = "gmail.com">hagarwal_be19@thapar.edu</a>
+        (You must mail with your thapar id). </h3>
+        <br><h1>Our team will reach out to you within 24 hours. Thankyou</h1>
+    </label>
+  </div>
 {% endblock content%}
