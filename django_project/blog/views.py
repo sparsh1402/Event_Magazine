@@ -10,4 +10,7 @@ def home(request):
     }
     return render(request, 'blog/home.html',context)
 def contact_us(request):
-    return render(request, 'blog/contact_us.html',{'title' : 'contact_us'})   
+    return render(request, 'blog/contact_us.html',{'title' : 'contact_us'})  
+
+def about(request):
+    return render(request, 'blog/about.html',{'title' : 'about'}) 
