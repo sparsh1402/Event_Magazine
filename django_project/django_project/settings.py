@@ -15,7 +15,7 @@ DEBUG = False
 
 
 
-ALLOWED_HOSTS = ['127.0.0.1','EventMagazine.com']
+ALLOWED_HOSTS = ['127.0.0.1','eventmagazine.herokuapp.com']
 
 
 # Application definition
