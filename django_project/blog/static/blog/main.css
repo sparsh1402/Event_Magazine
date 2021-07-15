@@ -1,5 +1,5 @@
 body {
-    background: #fafafa;
+    background: #a09898;
     color: #333333;
     margin-top: 5rem;
   }
@@ -17,11 +17,11 @@ body {
   }
   
   .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+    color: #642507;
   }
   
   .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
+    color: #610505;
   }
   
   .site-header .navbar-nav .nav-link.active {
@@ -29,7 +29,7 @@ body {
   }
   
   .content-section {
-    background: #ffffff;
+    background: #e9e4e4;
     padding: 10px 20px;
     border: 1px solid #dddddd;
     border-radius: 3px;
@@ -41,7 +41,7 @@ body {
   }
   
   a.article-title:hover {
-    color: #428bca;
+    color: #c44f0b;
     text-decoration: none;
   }
   
