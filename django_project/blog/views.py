@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
+from django.core.mail import send_mail
+
 from django.views.generic import (
     ListView,
     DetailView,
@@ -76,9 +78,31 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
    
 
 def contact_us(request):
+    if request.method == "POST":
+        head_name = request.POST['head-name']
+        phone_number = request.POST['phone-number']
+        society_name = request.POST['society-name']
+        society_email = request.POST['society-email']
+        message = request.POST['message']
+        
+        msg = "Head Name : " + head_name + "\n" + "Phone Number : " + phone_number + "\n"  + "Society Name: " + society_name +"\n" + "Society Email: " + society_email +"Message" + "\n" + message 
+              
+        
+
+        
+
+        send_mail(
+          "Registration",
+        msg,
+        society_email,
+          ['ishu142000@gmail.com']
+            )
     return render(request, 'blog/contact_us.html',{'title' : 'contact_us'})   
 
 def about(request):
     return render(request, 'blog/about.html',{'title' : 'about'}) 
+
+
+
 
   

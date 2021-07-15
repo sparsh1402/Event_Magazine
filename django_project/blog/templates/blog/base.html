@@ -28,6 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarToggle">
               <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
+                <!-- <a lass="nav-item nav-link" href="{% url 'blog-home' %}"> <i class="fas fa-home mr-1"></i>Home</a> -->
                 {% if user.is_authenticated %}
                 <a class="nav-item nav-link" href="{% url 'blog-contact_us' %}">Contact Us</a>
                 {% endif %}
