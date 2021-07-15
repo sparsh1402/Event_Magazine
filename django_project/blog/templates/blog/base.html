@@ -12,23 +12,24 @@
     <link rel="stylesheet" href="{% static 'blog/main.css'%}">
     <link rel="stylesheet" href="{% static 'blog/contact.css'%}">
     {% if title %}
-    <title>Django Blog - {{ title }}</title>
+    <title>Event Magazine - {{ title }}</title>
 {%else%}
-    <title> Django Blog</title>
+    <title> Event Magazine</title>
 {% endif %}
 </head>
 <body>
     <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark bg-light fixed-top">
           <div class="container">
-            <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Event Magazine</a>
+            <a href="#"  class="navbar-left" class="navbar-brand"> <img class="navbar-left" src="https://studentcorner.epsiindia.org/upload/college/TI_LOGO.png" class="rounded-circle" class="img-responsive logo" width="100" height="70" alt="Mountain"></a>
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggle">
               <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="{% url 'blog-home' %}"  >Event Magazine</a>
                 <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
-                <!-- <a lass="nav-item nav-link" href="{% url 'blog-home' %}"> <i class="fas fa-home mr-1"></i>Home</a> -->
                 {% if user.is_authenticated %}
                 <a class="nav-item nav-link" href="{% url 'blog-contact_us' %}">Contact Us</a>
                 {% endif %}
